@@ -1,0 +1,31 @@
+name: Copy Static Code
+
+on:
+  push:
+    branches:
+      - main # Change this to your preferred branch name
+
+jobs:
+  copy_static:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Clone private repo
+        run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "GitHub Actions"
+          git clone --depth 1 --branch main https://github.com/arun-singh-masillamony/diagnal.git
+
+      - name: Copy static files
+        run: |
+          cp -R diagnal/static-folder build/
+
+      - name: Commit and push changes
+        run: |
+          cd build
+          git add .
+          git commit -m "Update static files"
+          git push origin main
