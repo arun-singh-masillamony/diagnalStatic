@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.2f5eb749.css","mappings":"AAAA,KAEC,wBAAyB,CACzB,UAAc,CAFd,oCAAwC,CAIxC,QAAS,CADT,SAED,CACA,KACC,eACD","sources":["index.css"],"sourcesContent":["body {\n\tfont-family: 'Titillium Web', sans-serif;\n\tbackground-color: #171717;\n\tcolor: #ffffff;\n\tpadding: 0;\n\tmargin: 0;\n}\nhtml {\n\tfont-size: 62.5%;\n}\n"],"names":[],"sourceRoot":""}
